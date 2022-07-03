@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Table Tag</title>
+    <meta name="author" content="vishwjeet ujgare">
+    <meta name="discription" content="Create a static webpage using table tags of HTML">
+    <meta name="keywords" content="static ,webpage,table,tag,table tag,html">
+    <style>
+        .format-2 tr td,
+        th {
+            border: 1px solid black;
+        }
+
+        .format-2 {
+            border-collapse: collapse;
+            width: 50%;
+        }
+    </style>
+</head>
+
+<body style="background-color: rgb(214, 214, 230);">
+    <div
+        style="text-align: center;background-color: rgb(63, 14, 108);color: white;font-family: 'Times New Roman', Times, serif;">
+        <b>Assingment No :1</b>
+        <h2>Create a static webpage using <strong><u>table tags</u></strong> of HTML.</h2>
+
+    </div>
+    
+   
+    <h1>Different Types Of Table Formatings :</h1>
+    <hr>
+    <ol>
+        
+    <table border="1px" style="border-collapse: collapse;width: 60%;">
+       <li><caption>Marks Obtain In Academics</caption></li> 
+        <tr>
+            <th>Sr No</th>
+            <th>Class </th>
+            <th>College / school</th>
+            <th>Board / University</th>
+            <th>Percentage %</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>BCA</td>
+            <td>Modern College Of Arts ,Commerce and Science,Shiwajinagar,Pune-05</td>
+            <td>SPPU</td>
+            <td>71</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>12<sub>th</sub></td>
+            <td>Modern College Of Arts ,Commerce and Science,Shiwajinagar,Pune-05</td>
+            <td>HSC</td>
+            <td>54</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>10<sub>th</sub></td>
+            <td>Modern College Of Arts ,Commerce and Science,Shiwajinagar,Pune-05</td>
+            <td>SSC</td>
+            <td>86.60</td>
+        </tr>
+    </table>
+    <hr>
+    <table class="format-2">
+       <li> <caption>Marks Obtain In Academics</caption></li>
+        <tr>
+            <th>Sr No</th>
+            <th colspan="2">Class </th>
+            <th>College / school</th>
+            <th>Board / University</th>
+            <th colspan="2">Percentage %</th>
+        </tr>
+        <tr>
+            <td rowspan="3">1</td>
+            <td rowspan="3">BCA</td>
+            <td>SEM-III</td>
+            <td rowspan="3">Modern College Of Arts ,Commerce and Science,Shiwajinagar,Pune-05</td>
+            <td rowspan="3">SPPU</td>
+            <td rowspan="3">75</td>
+            <td>75</td>
+
+        </tr>
+        <tr>
+            <td>SEM-II</td>
+            <td>65</td>
+        </tr>
+        <tr>
+            <td>SEM-I</td>
+            <td>70</td>
+
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td colspan="2">12<sub>th</sub></td>
+            <td>Modern College Of Arts ,Commerce and Science,Shiwajinagar,Pune-05</td>
+            <td>HSC</td>
+            <td colspan="2">54</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td colspan="2">10<sub>th</sub></td>
+            <td>Modern College Of Arts ,Commerce and Science,Shiwajinagar,Pune-05</td>
+            <td>SSC</td>
+            <td colspan="2">86.60</td>
+        </tr>
+    </table>
+</ol>
+</body>
+
+</html>
