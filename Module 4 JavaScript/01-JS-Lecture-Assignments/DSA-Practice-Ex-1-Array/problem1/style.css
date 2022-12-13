@@ -1,0 +1,62 @@
+
+main {
+    width: 60vh;
+    margin: auto;
+
+}
+
+.row {
+    border: 2px solid gray;
+    padding: 2%;
+    margin-bottom: 2%;
+}
+
+.row:first-child label {
+    display: block;
+    margin-bottom: 5px;
+
+}
+
+#name {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 2%;
+    padding: 2%;
+}
+
+.form-inline {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.form-inline label {
+    display: inline-block;
+    width: 140px;
+}
+
+.form-inline input {
+
+    background-color: white;
+    width: auto;
+}
+
+.btn-container {
+    text-align: center;
+}
+
+.btn {
+    width: 40%;
+    padding: 2%;
+}
+
+.btn:hover {
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+.stud-table-container {
+    margin-top: 5%;
+}
+

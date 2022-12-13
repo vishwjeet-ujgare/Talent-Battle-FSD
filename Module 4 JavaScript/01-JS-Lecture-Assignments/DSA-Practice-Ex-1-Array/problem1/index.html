@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Assigment No 1- DSA Array Practice</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="common.css">
+</head>
+
+<body>
+    <nav>
+        <h1>Practice Exercises-1</h1>
+        <h2>JavaScript DSA Array Practice</h2>
+    </nav>
+
+    <div class="problem-state">
+        <h4>
+            <p>1.Create a grades object that stores a set of student grades in an object. Provide a
+                function for adding a grade and a function for displaying the student's grade average.</p>
+        </h4>
+    </div>
+
+    <main>
+        <div class="form-container">
+            <form action="abc.php"  onsubmit="return validForm()" name="marksForm" id="myForm" method="post">
+                <div class="row">
+                    <label for="name">Select student name</label>
+                    <select name="name" id="name">
+                        <option value="Amey">Amey</option>
+                        <option value="Vishwjeet">Vishwjeet</option>
+                        <option value="Sanjana">Sanjana</option>
+                    </select>
+
+                    <div class="error" id="nameError"></div>
+                </div>
+
+                <div class="row" >
+                    <label for="marks">Select subject and enter student Marks/grades</label>
+
+                    <div class="grade-div">
+                        <div class="form-inline">
+                            <label for="java"><input type="checkbox" name="sub[]" value="java"> Core
+                                Java</label>
+                            <input type="number" name="marks[]" min="0" max="100">
+                        </div>
+                        <div class="error" id="java" ></div>
+
+                    </div>
+
+
+                    <div class="grade-div">
+                        <div class="form-inline">
+                            <label for="python"><input  type="checkbox" name="sub[]"
+                                    value="python">Python</label>
+                            <input type="number" name="marks[]" min="0" max="100">
+                        </div>
+                        <div class="error" id="python"></div>
+
+                    </div>
+
+                    <div class="grade-div">
+                        <div class="form-inline">
+                            <label for="javascript"><input  type="checkbox" name="sub[]"
+                                    value="javascript">JavaScript</label>
+                            <input type="number" name="marks[]" min="0" max="100">
+                        </div>
+                        <div class="error" id="javascript"></div>
+
+                    </div>
+                </div>
+
+                <div class="row btn-container">
+                    <input type="submit" class="btn" value="Add">
+                    <input type="button" class="btn" id ="avgBtn" value="Show average">
+                </div>
+            </form>
+        </div>
+
+        <div class="stud-table-container">
+            <table border="2px" id="tablee">
+                <tr class="tbl-heading">
+                    <th rowspan="2">sr.no</th>
+                    <th rowspan="2">Student Name</th>
+                    <th colspan="3">subject Name</th>
+                    <th rowspan="2">Selected Subject</th>
+
+                    <th rowspan="2">averages</th>
+                </tr>
+              
+                <tr>
+                    <th>Core Java</th>
+                    <th>Python</th>
+                    <th>JavaScript</th>
+                </tr>
+            </table>
+        </div>
+    </main>
+
+    <script src="logic.js"></script>
+</body>
+
+</html>

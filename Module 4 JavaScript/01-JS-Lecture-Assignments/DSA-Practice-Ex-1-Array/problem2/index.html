@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA PE-1 ,Q2</title>
+<link rel="stylesheet" href="common.css">
+
+</head>
+
+<body>
+    <nav>
+        <h1>Practice Exercises-1</h1>
+        <h2>JavaScript DSA Array Practice </h2>
+    </nav>
+
+    <div class="problem-state">
+        <h4>
+            <p>Q.2. Store a set of words in an array and display the contents both forward and backward.</p>
+        </h4>
+    </div>
+
+    <main>
+        <p>Please check console ...</p>
+    </main>
+
+    <script>
+        let array = ["one", "two", "three", "four", "five"]
+
+
+
+        console.log("----------------------------")
+        console.log("set of words  are :")
+        console.log("[ " + array.join(" ") + " ]")
+
+        console.log("----------------------------")
+
+        console.log("using reduce method ")
+
+        var reducedForward = array.reduce((acc, current) => {
+            return acc + current + " "
+        }, "")
+
+        console.log("Forward :", reducedForward)
+        console.log("----------------------------")
+
+
+        console.log("using reduceRight method ")
+        var reducedBackword = array.reduceRight((acc, current) => {
+            return acc + current + " "
+        }, "")
+
+        console.log("Backword :", reducedBackword)
+        console.log("----------------------------")
+
+        console.log("using join")
+        console.log("Forward : " + array.join(" "))
+        console.log("----------------------------")
+
+        console.log("using reverse method")
+
+        console.log("Backword : " + array.reverse())
+
+        //output :
+        /*
+        ----------------------------
+        set of words  are :
+        [ one two three four five ]
+        ----------------------------
+        using reduce method 
+        Forward : one two three four five 
+        ----------------------------
+        using reduceRight method 
+        Backword : five four three two one 
+        ----------------------------
+        using join
+        Forward : one two three four five
+        ----------------------------
+        using reverse method
+        Backword : five,four,three,two,one
+*/
+    </script>
+
+
+
+</body>
+
+</html>
