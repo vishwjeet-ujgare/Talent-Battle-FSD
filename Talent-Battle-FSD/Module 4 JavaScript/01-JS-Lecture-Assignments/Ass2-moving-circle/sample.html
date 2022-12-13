@@ -1,0 +1,94 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title> JS Assignment2</title> 
+</head> 
+<body id="test" onload="shape();" style="border: 2px solid black;"> 
+    <canvas id = "circle" width="1200px" height="800px"></canvas> 
+    <!-- <button onclick="myStop()">Stop the time</button> --> 
+     
+    <script> 
+       var count=0;
+            let i=1; 
+             let j=1;
+
+               var TopToBottomInterval;
+               var rightToLeftInterval;
+
+                function leftToRight() 
+                { 
+                    count=count+1;
+                    var c = document.getElementById('circle'); 
+                    if (c.getContext) 
+                    { 
+                        var ctx = c.getContext("2d"); 
+                        ctx.beginPath(); 
+                        ctx.arc(60*i, 75, 50, 0, 2*Math.PI); 
+                        ctx.strokeStyle ="red"; 
+                        ctx.stroke(); 
+                        i+=0.85; 
+                        if(count==20)
+                        {
+                            clearInterval(leftToRightInterval)
+                            count=0;
+                           TopToBottomInterval=setInterval(TopToBottom, 100)
+                        }
+
+                    } 
+                } 
+                
+            var leftToRightInterval=setInterval(leftToRight, 100) 
+
+           
+           
+                function TopToBottom() 
+                { 
+                    count=count+1;
+                    var c = document.getElementById('circle'); 
+                    if (c.getContext) 
+                    { 
+                        var ctx = c.getContext("2d"); 
+                        ctx.beginPath(); 
+                        ctx.arc(1040,150*j, 50, 0, 2*Math.PI); 
+                        ctx.strokeStyle ="red"; 
+                        ctx.stroke(); 
+                        j+=0.35; 
+                        if(count==8)
+                        {
+                            clearInterval(TopToBottomInterval)
+                            count=0
+                            
+                            rightToLeftInterval=setInterval(rightToLeft, 100) 
+                        }
+
+                    } 
+                } 
+                
+                let z=600;
+                function rightToLeft() 
+                { 
+                    count=count+1;
+                    var c = document.getElementById('circle'); 
+                    if (c.getContext) 
+                    { 
+                        var ctx = c.getContext("2d"); 
+                        ctx.beginPath(); 
+                        ctx.arc(430+z,565, 50, 0, 2*Math.PI); 
+                        ctx.strokeStyle ="red"; 
+                        ctx.stroke(); 
+                        z-=50; 
+                        if(count==20)
+                        {
+                            clearInterval(rightToLeftInterval)
+                        }
+
+                    } 
+                } 
+         
+       
+    </script> 
+</body> 
+</html>

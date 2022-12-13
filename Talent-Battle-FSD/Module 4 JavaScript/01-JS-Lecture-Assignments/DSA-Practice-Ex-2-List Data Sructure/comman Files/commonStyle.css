@@ -1,0 +1,44 @@
+body{
+padding: 0%;
+font-family: 'Times New Roman', Times, serif;
+
+}
+#qContainer
+{
+    background-color:#E7EEEf;
+    text-align: justify;
+    padding: 1px 20px;
+}
+#q
+{
+    font-weight: 200;
+    
+}
+#qContainer h1{
+    text-align: center;
+}
+#note
+{
+    background-color:#E7EEEf;
+  
+    /* padding: 1px 20px; */
+    margin-bottom: 2px;
+
+}
+#note ul
+{
+display: flex;
+padding: 0px;
+margin: 0px;
+
+
+}
+#note li
+{
+
+    margin-left:10% ;
+}
+
+header,main{
+    padding:0% 1% ;
+}

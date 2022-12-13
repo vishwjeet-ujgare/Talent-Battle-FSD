@@ -1,0 +1,99 @@
+
+
+.container {
+    border: 2px solid black;
+    margin-top: 1%;
+    padding: 1%;
+    background-color:#E7EEEf;
+
+  
+
+}
+#inputSelecteValue {
+    /* border: 2px solid black; */
+ 
+    padding: 1%;
+    background-color: #d7f0f3;
+    display: flex;
+    justify-content: space-around;
+    padding: 1%;
+
+}
+
+
+
+.inputDiv ,.selectedValueDiv
+{
+    width: 40%;
+    width: 40%;
+    font-size: 18px;
+    padding: 1%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.inputDiv {
+    border: 1px solid black;
+ 
+}
+
+.selectedValueDiv
+{ 
+    border: 1px solid black;
+
+}
+
+.row {
+    width: 96%;
+    /* border: 1px solid black; */
+    padding: 1%;
+    text-align: center;
+    margin-bottom: 2%;
+    
+
+}
+.row input{
+    width: 90%;
+    font-size: 18px;
+    padding: 1%;
+
+}
+.inner-div 
+{ 
+    background-color: rgb(250, 251, 251);
+    /* padding: 0% 2%; */
+    
+}
+.gender-div
+{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2%;
+
+}
+.inner-div label, input
+{
+width: 50px;
+
+    
+}
+table
+{
+width: 50%;
+margin: auto;
+text-align: center;
+}
+.tbl-div
+{
+    margin-top: 2%;
+    
+}
+table,
+th,
+td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 1%;
+    font-size: 18px;
+}
+
