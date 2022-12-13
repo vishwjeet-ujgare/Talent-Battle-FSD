@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>OOP Assignment</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body onload="displayRollNo(1)">
+    <header>
+        <h1>OOP in Javscript</h2>
+            <h3>Assignment :-Accept data for student class which is having 3 instances</h3>
+    </header>
+
+    <div id="form-container">
+        <form id="form" name="studentForm" onsubmit="return validateForm()" action="abc.php" method="post">
+            <h2 id="form-heading">Student Form</h2>
+            <div class="row">
+                    <label for="rollNo">Roll Number</label>
+                    <input type="number" id="rollNo" required disabled>
+                </div>
+
+            <div class="row">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name ="firstName" required>
+            </div>
+
+            <div class="row">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+
+            <div class="row">
+                <label for="dob">DOB</label>
+                <input type="date" id="dob" name="dob"  onchange="displayAge()" required>
+            </div>
+
+            <div class="row">
+                    <label for="age">Age</label>
+                    <input type="text" id="age" name="age" placeholder="Enter valid DOB please..!" disabled>
+                </div>
+
+            <div class="row">
+                <label for="email">Email Id</label>
+                <input type="text" id="email" name="email" required>
+            </div>
+            <!-- <div class="row">
+                <label for="phone">Mobile Number</label>
+                <input type="text" maxlength="10" minlength="10" id="phone" name="phone" required>
+            </div> -->
+
+            <div id="gender-con">
+                <label for="">Select Gender</label>
+                <div id="gender">
+
+                    <div class="form-group">
+                        <input type="radio" id="male" value="Male" name="gender" required>
+                        <label for="male">Male</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="radio" id="female" value="Female" name="gender" required>
+                        <label for="female">Female</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="radio" id="other" value="Other" name="gender" required>
+                        <label for="other">Other</label>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="row">
+                <label for="cource">Select Department</label>
+                <select id="cource" name="cource" required>
+                    <optgroup label="Undergraduate Degree">
+                        <option value="Engineering">Engineering</option>
+                        <option value="BCA">BCA</option>
+                        <option value="BBA   ">BBA    </option>
+                        <option value="B.Tech">B.Tech </option>
+                    </optgroup>
+                    <optgroup label="Master Degree">
+                        <option value="MCA   ">MCA    </option>
+                        <option value="MBA   ">MBA    </option>
+                        <option value="M.Tech">M.Tech</option>
+                    </optgroup>
+                    <optgroup label="Other">
+                        <option value="Other">Other</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div id="btn-con" class="row">
+                <input type="submit" value="Submit">
+            </div>
+
+        </form>
+
+
+
+    </div>
+
+    
+
+    <script src="logic.js"></script>
+
+</body>
+
+</html>

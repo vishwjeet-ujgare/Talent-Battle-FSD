@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="vishwjeet ujgare">
+    <title>setInterval Function Assignment</title>
+  </head>
+  <style>
+    #div-container {
+      border: 2px solid black;
+      padding: 20px;
+      position: relative;
+     
+    }
+
+    #reatangle {
+      /* border: 2px solid black; */
+      width: 800px;
+      height: 400px;
+      display: inline-block;
+      margin-left: 25%;
+      position: relative;
+    }
+
+    /* #circle {
+      display: inline-block;
+      border: 2px solid red;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      position: absolute;
+      /* left: 750px;
+      top: 60px; 
+    } */
+    .count
+    {
+      color: red;
+    }
+  </style>
+  <header>
+    <div style="text-align: center;">
+        <strong>Lecture Assignment</strong>
+        <h2>FSD Javascript Part-13 Using <mark>setInterval(function(),milliseconds)</mark></h2>
+    </div>
+    <div>
+    <b>Left To right circle Count :</b>
+      <b  class="count"  id="leftToRightCount"></b>||
+
+      <b>Top to Bottom circle count :</b>
+      <b   class="count"  id="topToBottom"></b>||
+
+      <b>right To Left circle count :</b>
+      <b   class="count" id="rightToLeft"></b>||
+
+      <b>Total Circle Count:</b>
+      <b  class="count"   id="totalCount"></b>
+        <b style="margin-left: 70%;">-Name :</b><strong>Vishwjeet.R.Ujgare</strong>
+    </div>
+  </header>
+
+  <body>
+    <main>
+      <div id="div-container">
+        <div id="reatangle">
+          <span id="circle"> </span>
+        </div>
+      </div>
+    </main>
+    <div style="color: red;">
+        
+        <p><b>Note:</b>This is not a responsive page please Run it on a screen having  width  more than "1111px" and heigth "610px"</p>
+    </div>
+
+    <script>
+      var reactangleElem = document.getElementById("reatangle");
+      var reactangleWith = reactangleElem.clientWidth;
+      var reactangleHight = reactangleElem.clientHeight;
+
+     
+
+
+     var topMargin = 0;//20
+     var leftMargine = -30;
+      toRight = reactangleWith - 50;
+      toBottom = reactangleHight -50 ;
+      console.log(reactangleHight,toBottom)
+      var newcircle;
+
+      function creatCircle() {
+        newcircle = document.createElement("span");
+        newcircle.style.width = "50px";
+        newcircle.style.height = "50px";
+        newcircle.style.display = "inline-block";
+        newcircle.style.borderRadius = "50%";
+        newcircle.style.position = "absolute";
+        newcircle.style.border = "thin solid red";
+      }
+
+
+      var leftToRightCountElem=document.getElementById("leftToRightCount");
+      var leftToRightCount=0
+
+      var myRightInterval = setInterval(function () {
+        creatCircle();
+        leftMargine = leftMargine + 30;
+        newcircle.style.left = leftMargine + "px";
+        reactangleElem.appendChild(newcircle);
+
+        leftToRightCount+=1;
+        leftToRightCountElem.innerHTML=leftToRightCount;
+
+        if (leftMargine >= toRight) {
+          clearInterval(myRightInterval);
+          renderTopToBotton();
+        }
+      }, 100);
+    //   console.log("width of the reactangle is : " + reactangleWith);
+
+var topToBottomElem=document.getElementById('topToBottom');
+var topToBottomCount=0;
+
+
+      function renderTopToBotton() {
+        var myBottomInterval = setInterval(function () {
+          creatCircle();
+          
+          newcircle.style.left = leftMargine+"px";
+          topMargin = topMargin + 30;
+          newcircle.style.top = topMargin + "px";
+          reactangleElem.appendChild(newcircle);
+
+          topToBottomCount+=1;
+          topToBottomElem.innerHTML=topToBottomCount;
+
+          if (topMargin>=toBottom) {
+            clearInterval(myBottomInterval);
+            // console.log(leftMargine)
+            // console.log(topMargin)
+            renderRightToLeft()
+          }
+        }, 100);
+      }
+
+
+
+      var rightToLeftElem=document.getElementById('rightToLeft');
+      var rightToLeftCount=0;
+      
+      function renderRightToLeft() {
+        // leftMargine = leftMargine - 20;
+        var myRightToLeftInterval = setInterval(function () {
+          creatCircle();
+          leftMargine = leftMargine - 30;
+          newcircle.style.left = leftMargine+"px";
+          newcircle.style.top = topMargin +"px";
+
+          reactangleElem.appendChild(newcircle);
+
+          rightToLeftCount+=1;
+          rightToLeftElem.innerHTML=rightToLeftCount;
+          if (30>=leftMargine) {
+            clearInterval(myRightToLeftInterval);
+            document.getElementById("totalCount").innerHTML=leftToRightCount+topToBottomCount+rightToLeftCount;
+          }
+        }, 100);
+      }
+
+
+    </script>
+  </body>
+</html>
